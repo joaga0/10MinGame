@@ -48,8 +48,6 @@ public class Player : MonoBehaviour
         {
             spriter.flipX = inputVec.x < 0;
             anim.Play("Player_SideMove");  // 왼쪽 이동
-        } else {
-            anim.Play("IdleAnimation"); // 가만히 있을 때
         }
     }
 }
