@@ -11,6 +11,7 @@ public class SceneControl : MonoBehaviour
     {
         instance = this;
     }
+    
     public void GameScenesControl(int Id)
     {
         switch (Id)
