@@ -396,11 +396,11 @@ PlayableDirector:
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: -7482942224981460550, guid: cf1d0c18808b8bd44b9ccab001c67cca, type: 2}
-    value: {fileID: 2133190642}
+    value: {fileID: 0}
   - key: {fileID: -7925444247791530266, guid: cf1d0c18808b8bd44b9ccab001c67cca, type: 2}
-    value: {fileID: 2133190643}
+    value: {fileID: 0}
   - key: {fileID: -1494285642990294250, guid: cf1d0c18808b8bd44b9ccab001c67cca, type: 2}
-    value: {fileID: 2133190643}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &379416017
@@ -840,7 +840,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1180107418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -904,7 +904,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 3.375
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -935,6 +935,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &1245653147
 GameObject:
   m_ObjectHideFlags: 0
@@ -1889,12 +1890,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputVec: {x: 0, y: 0}
   speed: 1.5
+=======
+>>>>>>> 3f93b924248b8eb97f64a0dc1ad27df8a81209a6
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1180107421}
   - {fileID: 379416017}
+<<<<<<< HEAD
   - {fileID: 2133190648}
   - {fileID: 536647363}
   - {fileID: 49491473}
+=======
+>>>>>>> 3f93b924248b8eb97f64a0dc1ad27df8a81209a6
