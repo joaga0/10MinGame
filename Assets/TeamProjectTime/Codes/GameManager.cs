@@ -22,9 +22,11 @@ public class GameManager : MonoBehaviour
     {
         if(scanObj != null){
             scanObject = scanObj;
-            SceneControl.instance.GameScenesControl(scanObject.GetComponent<Items>().Id);
             talkText.text = "이것의 이름은 " + scanObj.name;
-            if(Displaying == false) StartCoroutine(DisplayCanvas());
+            if(Displaying == false) {
+                StartCoroutine(DisplayCanvas());
+            }
+            SceneControl.instance.GameScenesControl(scanObject.GetComponent<Items>().Id);
         }
     }
 
