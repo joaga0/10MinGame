@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public GameManager manager;
     public Vector2 inputVec;
     Vector3 dirVec;
     GameObject scanObject;
@@ -31,7 +30,7 @@ public class Player : MonoBehaviour
         //대화창
         if(Input.GetKeyDown(KeyCode.E))
         {
-            manager.Action(scanObject);
+            GameManager.instance.Action(scanObject);
         }
     }
 

@@ -2205,6 +2205,7 @@ MonoBehaviour:
   newSprite: {fileID: 1281251089, guid: 57b4e3b2386e5f24083f1dd42ab3e1ea, type: 3}
   ChangeDuration: 2
   Changed: 0
+  Id: 0
 --- !u!50 &567192164
 Rigidbody2D:
   serializedVersion: 4
@@ -2288,6 +2289,7 @@ GameObject:
   - component: {fileID: 601063441}
   - component: {fileID: 601063442}
   - component: {fileID: 601063443}
+  - component: {fileID: 601063444}
   m_Layer: 0
   m_Name: catus
   m_TagString: Untagged
@@ -2389,6 +2391,51 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!61 &601063444
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601063440}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.53846157, y: 0.61538464}
+    newSize: {x: 0.7777778, y: 0.8888889}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.53846157, y: 0.61538464}
+  m_EdgeRadius: 0
 --- !u!1 &650063418
 GameObject:
   m_ObjectHideFlags: 0
@@ -3243,6 +3290,7 @@ MonoBehaviour:
   newSprite: {fileID: -1390819089, guid: 57b4e3b2386e5f24083f1dd42ab3e1ea, type: 3}
   ChangeDuration: 2
   Changed: 0
+  Id: 2
 --- !u!50 &953822229
 Rigidbody2D:
   serializedVersion: 4
@@ -3687,6 +3735,7 @@ MonoBehaviour:
   newSprite: {fileID: -1349298832, guid: 57b4e3b2386e5f24083f1dd42ab3e1ea, type: 3}
   ChangeDuration: 2
   Changed: 0
+  Id: 1
 --- !u!50 &1154533823
 Rigidbody2D:
   serializedVersion: 4
@@ -3973,6 +4022,7 @@ MonoBehaviour:
   newSprite: {fileID: -726377229, guid: 57b4e3b2386e5f24083f1dd42ab3e1ea, type: 3}
   ChangeDuration: 2
   Changed: 0
+  Id: 4
 --- !u!50 &1261385620
 Rigidbody2D:
   serializedVersion: 4
@@ -4168,7 +4218,6 @@ GameObject:
   - component: {fileID: 1290757226}
   - component: {fileID: 1290757227}
   - component: {fileID: 1290757228}
-  - component: {fileID: 1290757229}
   m_Layer: 0
   m_Name: shelf
   m_TagString: Untagged
@@ -4270,51 +4319,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!61 &1290757229
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1290757225}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.41437885}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.7307693, y: 1.1538461}
-    newSize: {x: 1.7307693, y: 1.1538461}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.7307693, y: 0.32508856}
-  m_EdgeRadius: 0
 --- !u!1 &1422802986
 GameObject:
   m_ObjectHideFlags: 0
@@ -4780,6 +4784,7 @@ MonoBehaviour:
   newSprite: {fileID: 1233168034, guid: 57b4e3b2386e5f24083f1dd42ab3e1ea, type: 3}
   ChangeDuration: 2
   Changed: 0
+  Id: 5
 --- !u!50 &1662069420
 Rigidbody2D:
   serializedVersion: 4
@@ -5381,6 +5386,7 @@ MonoBehaviour:
   newSprite: {fileID: -808712842, guid: 57b4e3b2386e5f24083f1dd42ab3e1ea, type: 3}
   ChangeDuration: 2
   Changed: 0
+  Id: 3
 --- !u!50 &1914898099
 Rigidbody2D:
   serializedVersion: 4
@@ -5789,9 +5795,10 @@ GameObject:
   - component: {fileID: 2133190647}
   - component: {fileID: 2133190646}
   - component: {fileID: 2133190643}
-  - component: {fileID: 2133190649}
   - component: {fileID: 2133190650}
+  - component: {fileID: 2133190649}
   - component: {fileID: 2133190651}
+  - component: {fileID: 2133190652}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -5927,7 +5934,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0699fdff17aa71448c19c73e01d13bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 1470554926}
   inputVec: {x: 0, y: 0}
   speed: 1.5
 --- !u!61 &2133190650
@@ -5988,6 +5994,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCanvas: {fileID: 10953106}
+--- !u!114 &2133190652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133190642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6780aa0add6992489d1702a6adf2a27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

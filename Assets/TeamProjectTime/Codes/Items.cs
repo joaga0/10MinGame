@@ -10,6 +10,7 @@ public class Items : MonoBehaviour
     private Sprite originalSprite;
     public float ChangeDuration;
     public bool Changed = false;
+    public int Id;
 
     // Start is called before the first frame update
     void Start()

@@ -5,16 +5,24 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
     public Text talkText;
     public GameObject scanObject;
     public GameObject playerCanvas;
 
     bool Displaying = false;
 
+
+    void Awake()
+    {
+        instance = this;
+    }
+
     public void Action(GameObject scanObj)
     {
         if(scanObj != null){
             scanObject = scanObj;
+            SceneControl.instance.GameScenesControl(scanObject.GetComponent<Items>().Id);
             talkText.text = "이것의 이름은 " + scanObj.name;
             if(Displaying == false) StartCoroutine(DisplayCanvas());
         }
