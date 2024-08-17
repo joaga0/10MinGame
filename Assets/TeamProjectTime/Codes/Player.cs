@@ -28,9 +28,12 @@ public class Player : MonoBehaviour
 
 
         //대화창
-        if(Input.GetKeyDown(KeyCode.E))
+        if(Input.GetKeyDown(KeyCode.E) && scanObject != null)
         {
-            GameManager.instance.Action(scanObject);
+            if(scanObject.CompareTag("GetItem")){
+                scanObject.GetComponent<GetItem>().Get();
+            }
+            else GameManager.instance.Action(scanObject);
         }
     }
 

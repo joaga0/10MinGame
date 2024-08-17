@@ -10,7 +10,7 @@ public class Talk : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.E))
         {
-            //playerCanvas.SetActive(!playerCanvas.activeSelf);
+            playerCanvas.SetActive(!playerCanvas.activeSelf);
         }
     }
 }
