@@ -9,7 +9,7 @@ public class Items : MonoBehaviour
     SpriteRenderer spriter;
     private Sprite originalSprite;
     public float ChangeDuration;
-    public bool Changed = false;
+    public bool Required = true;
     public int Id;
 
     // Start is called before the first frame update
@@ -24,7 +24,7 @@ public class Items : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.X))  // X키를 눌렀을 때
         {
-            if (Changed == false)
+            if (Required == false)
             {
                 StartCoroutine(ChangeSpriteTemp());
             }
@@ -34,10 +34,9 @@ public class Items : MonoBehaviour
 
     IEnumerator ChangeSpriteTemp()
     {
-        Changed = true;
+        Required = true;
         spriter.sprite = newSprite;
         yield return new WaitForSeconds(ChangeDuration);
         spriter.sprite = originalSprite;
-        Changed = false;
     }
 }
