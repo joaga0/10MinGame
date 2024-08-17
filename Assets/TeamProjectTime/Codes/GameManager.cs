@@ -7,10 +7,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public Text talkText;
-    public GameObject scanObject;
     public GameObject playerCanvas;
 
-    bool Displaying = false;
+    public bool Displaying = false;
 
 
     void Awake()
@@ -18,15 +17,16 @@ public class GameManager : MonoBehaviour
         instance = this;
     }
 
+    //플레이어가 E 누르면 상호작용
     public void Action(GameObject scanObj)
     {
         if(scanObj != null){
-            scanObject = scanObj;
             talkText.text = "이것의 이름은 " + scanObj.name;
-            if(Displaying == false) {
+            if(Displaying == false) { //캐릭터 말풍선 뜨게하기
                 StartCoroutine(DisplayCanvas());
             }
-            SceneControl.instance.GameScenesControl(scanObject.GetComponent<Items>().Id);
+            //씬 바꾸기
+            SceneControl.instance.GameScenesControl(scanObj.GetComponent<Items>().Id);
         }
     }
 

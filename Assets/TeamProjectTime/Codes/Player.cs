@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     public Vector2 inputVec;
     Vector3 dirVec;
-    GameObject scanObject;
+    public GameObject scanObject;
 
     public float speed;
 
@@ -49,7 +49,9 @@ public class Player : MonoBehaviour
             Debug.Log("Rayhit");
             scanObject = rayHit.collider.gameObject;
         }
-        else scanObject = null;
+        else {
+            scanObject = null;
+        }
     }
 
     private void LateUpdate() 
