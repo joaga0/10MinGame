@@ -3,14 +3,15 @@ guid: 8d346f6e0d04a9d43a13e0a2188cac5d
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
-  fontSize: 16
+  fontSize: 110
   forceTextureCase: -2
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
   fontNames:
   - NeoDunggeunmo
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: bf49cdec625020f4896fc30f289f66f1, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
