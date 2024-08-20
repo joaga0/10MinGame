@@ -7,20 +7,19 @@ public class BeGoodPlant : MonoBehaviour
     public GameObject good_plant;
     public GameObject before_text;
     public GameObject after_text;
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
+    private bool hasPlayed = false;
 
     void Update(){
-        if(PlayerHospital.watered==true){
+        if(PlayerHospital.watered == true && !hasPlayed){
+            GetComponent<AudioSource>().Play();
             StartCoroutine(growing());
+            hasPlayed = true;
         }
     }
 
     IEnumerator growing()
     {
-        yield return new WaitForSeconds(1.5f); 
+        yield return new WaitForSeconds(5f); 
         good_plant.SetActive(true);
         before_text.SetActive(false);
         after_text.SetActive(true);
