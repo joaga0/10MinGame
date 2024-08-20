@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
                 StartCoroutine(DisplayCanvas());
             }
             //씬 바꾸기
-            SceneControl.instance.GameScenesControl(scanObj.GetComponent<Items>().Id);
+            //SceneControl.instance.GameScenesControl(scanObj.GetComponent<Items>().Id);
         }
     }
 
