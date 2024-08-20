@@ -9,6 +9,9 @@ TagManager:
   - Shelf
   - Plant
   - Grandma
+  - Guitar
+  - Amp
+  - Cable
   layers:
   - Default
   - TransparentFX
