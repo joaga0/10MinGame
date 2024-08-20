@@ -8,11 +8,12 @@ public class GuitarGameManager : MonoBehaviour
     public bool havingGuitar;
     public bool ampOn;
     public bool connectCable;
-    public Image guitar_image;
     public Image open_amp;
+    public Image open_cable;
     public GameObject guitar_stand;
     public GameObject stand;
     private Music musicManager;
+    private GuitarPlayer guitarplayer;
 
     public GameObject[] musics;
     GameObject[] music_effect = new GameObject[6];
@@ -22,16 +23,17 @@ public class GuitarGameManager : MonoBehaviour
         havingGuitar = false;
         ampOn = false;
         connectCable = false;
-        guitar_image.gameObject.SetActive(false);
         musicManager = FindObjectOfType<Music>();
+        guitarplayer = FindObjectOfType<GuitarPlayer>();
     }
 
     public void Get_Guitar()
     {
         havingGuitar = true;
-        guitar_image.gameObject.SetActive(true);
+        //guitar_image.gameObject.SetActive(true);
         guitar_stand.SetActive(false);
         stand.SetActive(true);
+        guitarplayer.get_Guitar();
     }
 
     public void Open_Amp()
@@ -39,9 +41,22 @@ public class GuitarGameManager : MonoBehaviour
         open_amp.gameObject.SetActive(true);
     }
 
+    public void Open_Cable()
+    {
+        if (havingGuitar && ampOn)
+            open_cable.gameObject.SetActive(true);
+        else
+            Debug.Log("이전 단계를 먼저 끝내야합니다.");
+    }
+
     public void start_music()
     {
         StartCoroutine("left_music");
+    }
+
+    public void stop_music()
+    {
+        StopCoroutine("left_music");
     }
 
     public IEnumerator left_music()

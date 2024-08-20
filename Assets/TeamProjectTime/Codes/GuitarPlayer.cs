@@ -10,6 +10,8 @@ public class GuitarPlayer : MonoBehaviour
 
     private GuitarGameManager guitarManager;
 
+    public GameObject guitarMan;
+
     private void Awake() 
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -28,6 +30,10 @@ public class GuitarPlayer : MonoBehaviour
             else if(scanObject.CompareTag("Amp"))
             {
                 guitarManager.Open_Amp();
+            }
+            else if(scanObject.CompareTag("Cable"))
+            {
+                guitarManager.Open_Cable();
             }
             else GameManager.instance.Action(scanObject);
         }
@@ -50,5 +56,11 @@ public class GuitarPlayer : MonoBehaviour
         else {
             scanObject = null;
         }
+    }
+
+    public void get_Guitar()
+    {
+        Instantiate(guitarMan, transform.position, transform.rotation);
+        Destroy(gameObject);
     }
 }
