@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     public Vector2 inputVec;
     Vector3 dirVec;
-    GameObject scanObject;
+    public GameObject scanObject;
 
     public float speed;
 
@@ -28,9 +28,12 @@ public class Player : MonoBehaviour
 
 
         //대화창
-        if(Input.GetKeyDown(KeyCode.E))
+        if(Input.GetKeyDown(KeyCode.E) && scanObject != null)
         {
-            GameManager.instance.Action(scanObject);
+            if(scanObject.CompareTag("GetItem")){
+                scanObject.GetComponent<GetItem>().Get();
+            }
+            else GameManager.instance.Action(scanObject);
         }
     }
 
@@ -46,7 +49,9 @@ public class Player : MonoBehaviour
             Debug.Log("Rayhit");
             scanObject = rayHit.collider.gameObject;
         }
-        else scanObject = null;
+        else {
+            scanObject = null;
+        }
     }
 
     private void LateUpdate() 
