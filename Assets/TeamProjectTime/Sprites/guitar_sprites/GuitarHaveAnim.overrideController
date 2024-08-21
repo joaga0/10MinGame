@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: GuitarHaveAnim
+  m_Controller: {fileID: 9100000, guid: 1320e62bc0315154fa55dbf5600a9464, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 94888c8a88e95b242a8d8815df106131, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: cb5b69b4552524be9955b01965fd10f0, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 0664c660a2367e0438b1b7dfe08246e1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b86d69a88be594e0d89d8f9e4f6cbe5f, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: cb716666a9f9c5245ab4824098db0d52, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 0cb59d00293244deeaa2e9404e8eb01a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 895c02a33681c19488f6949eb4c7571d, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 328f088e84faa40a98ae55a8a28a171b, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: d3987fb56f83d7846bddf223a6ed5e21, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: d013d0be3031942babe3d28f4fabbc18, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 8729ef565e431574793b2206d198aea1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6467277b302024438a7cc575432159d4, type: 2}
