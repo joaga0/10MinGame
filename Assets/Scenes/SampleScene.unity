@@ -1773,7 +1773,7 @@ RectTransform:
   m_GameObject: {fileID: 300396572}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1578520527}
@@ -2557,7 +2557,7 @@ GameObject:
   - component: {fileID: 567192165}
   - component: {fileID: 567192164}
   m_Layer: 6
-  m_Name: Picture(Item)
+  m_Name: "\uC0AC\uC9C4"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4024,7 +4024,7 @@ GameObject:
   - component: {fileID: 953822230}
   - component: {fileID: 953822229}
   m_Layer: 6
-  m_Name: tree(Item)
+  m_Name: "\uD654\uCD08"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4442,7 +4442,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.050244987}
+  m_Offset: {x: 0, y: 0.101377875}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4453,7 +4453,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.461538, y: 0.053456187}
+  m_Size: {x: 8.461538, y: 0.3567019}
   m_EdgeRadius: 0
 --- !u!1 &1154533819
 GameObject:
@@ -4469,7 +4469,7 @@ GameObject:
   - component: {fileID: 1154533824}
   - component: {fileID: 1154533823}
   m_Layer: 6
-  m_Name: Guitar(Item)
+  m_Name: "\uAE30\uD0C0"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6111,7 +6111,7 @@ GameObject:
   - component: {fileID: 1914898100}
   - component: {fileID: 1914898099}
   m_Layer: 6
-  m_Name: Book(Item)
+  m_Name: "\uADF8\uB9BC \uC77C\uAE30"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

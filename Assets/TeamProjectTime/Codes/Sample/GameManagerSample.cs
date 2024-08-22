@@ -15,7 +15,7 @@ public class GameManagerSample : MonoBehaviour
 
     public bool Displaying = false;
 
-    public static int currentChapter = 2;
+    public static int currentChapter = 0;
     void Awake()
     {
         instance = this;
