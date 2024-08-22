@@ -23,6 +23,7 @@ TagManager:
   - Eraser
   - drawingdesk
   - NPC
+  - myfreind
   layers:
   - Default
   - TransparentFX
