@@ -12,6 +12,9 @@ TagManager:
   - Guitar
   - Amp
   - Cable
+  - Notice
+  - Cabinet
+  - today
   layers:
   - Default
   - TransparentFX

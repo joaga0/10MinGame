@@ -21,7 +21,6 @@ public class GameManager : MonoBehaviour
     public void Action(GameObject scanObj)
     {
         if(scanObj != null){
-            talkText.text = "이것의 이름은 " + scanObj.name;
             if(Displaying == false) { //캐릭터 말풍선 뜨게하기
                 StartCoroutine(DisplayCanvas());
             }

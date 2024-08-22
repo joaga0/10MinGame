@@ -9,6 +9,11 @@ public class Notice : MonoBehaviour
     Vector3 dirVec;
     Rigidbody2D rigid;
 
+    private void Awake()
+    {
+        rigid = GetComponent<Rigidbody2D>();
+    }
+
     void Update()
     {
         //대화창
