@@ -3,13 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class GameManager_Diary : MonoBehaviour
 {
-    public static GameManager instance;
+    public static GameManager_Diary instance;
     public Text talkText;
     public GameObject playerCanvas;
 
     public bool Displaying = false;
+    public bool Needle = false;
+    public bool String = false;
+    public bool Puzzle = false;
+
+    public bool Puzzle_Game = false;
+    public bool Bear_Game = false;
 
 
     void Awake()
@@ -31,7 +37,6 @@ public class GameManager : MonoBehaviour
 
     IEnumerator DisplayCanvas()
     {
-        
         Displaying = true;
         playerCanvas.SetActive(true);   // 캔버스 활성화
         yield return new WaitForSeconds(2f);  // 2초 대기
