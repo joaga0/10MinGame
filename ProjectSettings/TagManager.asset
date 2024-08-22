@@ -17,11 +17,15 @@ TagManager:
   - today
   - Bear
   - Puzzle
+<<<<<<< HEAD
   - Locker
   - insidecabinet
   - Unlockedcabinet
   - Eraser
   - drawingdesk
+=======
+  - NPC
+>>>>>>> 521b463c9bfbaee8b04218343a1c7dfeb714bf09
   layers:
   - Default
   - TransparentFX

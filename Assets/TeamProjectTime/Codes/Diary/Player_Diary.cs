@@ -40,6 +40,11 @@ public class Player_Diary : MonoBehaviour
             else if(scanObject.CompareTag("Puzzle")){
                 scanObject.GetComponent<PuzzleRe>().Action();
             }
+            else if(scanObject.CompareTag("NPC")){
+                if(GameManager_Diary.instance.Puzzle_Game && GameManager_Diary.instance.Bear_Game){
+                    scanObject.GetComponent<ChildClear>().DiaryClear();
+                }
+            }
             else    GameManager_Diary.instance.Action(scanObject);
             
         }
