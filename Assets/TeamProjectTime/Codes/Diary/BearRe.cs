@@ -3,36 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class BearRe : MonoBehaviour
 {
-    public static GameManager instance;
-    public Text talkText;
+    public bool canAct = false;
+    public Text Player_T;
     public GameObject playerCanvas;
-
+    public GameObject ActCanvas;
     public bool Displaying = false;
 
-
-    void Awake()
+    void Update() 
     {
-        instance = this;
+        if(canAct == false)
+        {
+
+        }
     }
 
-    //플레이어가 E 누르면 상호작용
-    public void Action(GameObject scanObj)
+    public void Action()
     {
-        if(scanObj != null){
-            talkText.text = "이것의 이름은 " + scanObj.name;
+        if(GameManager_Diary.instance.Needle || GameManager_Diary.instance.String) {
+            canAct = true;
+            ActCanvas.SetActive(true);
+        }
+        if(!canAct){
+            Player_T.text = "도구를 찾아보자";
             if(Displaying == false) { //캐릭터 말풍선 뜨게하기
                 StartCoroutine(DisplayCanvas());
             }
-            //씬 바꾸기
-            //SceneControl.instance.GameScenesControl(scanObj.GetComponent<Items>().Id);
         }
     }
 
     IEnumerator DisplayCanvas()
     {
-        
         Displaying = true;
         playerCanvas.SetActive(true);   // 캔버스 활성화
         yield return new WaitForSeconds(2f);  // 2초 대기

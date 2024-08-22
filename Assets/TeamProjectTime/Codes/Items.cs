@@ -22,14 +22,11 @@ public class Items : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X))  // X키를 눌렀을 때
+        if (Required == false)
         {
-            if (Required == false)
-            {
-                StartCoroutine(ChangeSpriteTemp());
-            }
-            
+            StartCoroutine(ChangeSpriteTemp());
         }
+
     }
 
     IEnumerator ChangeSpriteTemp()
