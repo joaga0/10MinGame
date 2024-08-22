@@ -10,10 +10,24 @@ public class TextWriting : MonoBehaviour
     string content;
     public Image image;
     public GameObject openingtext;
+    public int sceneId;
     // Start is called before the first frame update
     void Start()
     {
-        content = "2019년 12월 30일\n아내가 입원한 병원";
+        switch(sceneId){
+            case 0:
+                content = "2019년 5월 18일\n고등학교 교실";
+                break;
+            case 1:
+                content = "2024년 8월 23일\n버스킹을 봤던 거리";
+                break;
+            case 2:
+                content = "2045년 2월 10일\n쉬는 날, 집 거실";
+                break;
+            case 3:
+                content = "2078년 12월 30일\n아내가 입원한 병원";
+                break;
+        }
         StartCoroutine(Typing(content));
     }
 
