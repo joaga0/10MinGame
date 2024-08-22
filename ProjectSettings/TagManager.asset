@@ -17,6 +17,11 @@ TagManager:
   - today
   - Bear
   - Puzzle
+  - Locker
+  - insidecabinet
+  - Unlockedcabinet
+  - Eraser
+  - drawingdesk
   layers:
   - Default
   - TransparentFX

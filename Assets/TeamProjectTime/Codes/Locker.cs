@@ -9,7 +9,11 @@ public class Locker : MonoBehaviour
     private List<int> correctSequence = new List<int> { 9, 7, 1, 2 };  // 올바른 버튼 순서
     private List<int> inputSequence = new List<int>();  // 플레이어가 누른 버튼 순서
 
-    public GameObject door;  // 문 오브젝트
+    public GameObject OldCabinet;
+    public GameObject OpenCabinet;
+    public GameObject UnLocker;
+    public GameObject UnLocker2;
+    public GameObject whatobject;
 
     private void Start()
     {
@@ -62,6 +66,10 @@ public class Locker : MonoBehaviour
     {
         Debug.Log("문이 열렸습니다!");
         // 문을 여는 로직을 구현하세요 (예: 문 오브젝트 활성화/비활성화, 애니메이션 등)
-        door.SetActive(false);
+        UnLocker.SetActive(false);
+        UnLocker2.SetActive(true);
+        OldCabinet.SetActive(false);
+        OpenCabinet.SetActive(true);
+        whatobject.SetActive(true);
     }
 }

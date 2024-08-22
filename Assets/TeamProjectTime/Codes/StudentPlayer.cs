@@ -12,10 +12,15 @@ public class StudentPlayer : MonoBehaviour
     SpriteRenderer spriter;
     public GameObject OpenCabinet;
     public Text talkText;
+    public GameObject Locker;
+    public GameObject InsideCabinet;
+    public GameObject Unlockers;
+    public GameObject EraserCanvas;
+    public GameObject deskwithdraw;
 
     public float speed;
     private bool hasTalked = false; // 오늘 날짜가 표시되었는지 확인하는 플래그
-
+    private bool hasTalked2 = false;
     Rigidbody2D rigid;
     Animator anim;
 
@@ -39,6 +44,13 @@ public class StudentPlayer : MonoBehaviour
             hasTalked = true; // 한번 실행된 후 다시 실행되지 않도록 설정
         }
 
+        if (scanObject.CompareTag("insidecabinet") && !hasTalked2)
+        {
+            talkText.text = "아참, 사물함 내부를 안봤네!";
+            GameManager.instance.Action(scanObject);
+            hasTalked2 = true; // 한번 실행된 후 다시 실행되지 않도록 설정
+        }
+
         //대화창
         if (Input.GetKeyDown(KeyCode.E) && scanObject != null)
         {
@@ -49,7 +61,28 @@ public class StudentPlayer : MonoBehaviour
 
             else if(scanObject.CompareTag("Cabinet"))
             {
-                OpenCabinet.SetActive(true);
+                Locker.SetActive(true);
+            }
+
+            else if(scanObject.CompareTag("Unlockedcabinet"))
+            {
+                hasTalked = true;
+                hasTalked2 = true;
+                Unlockers.SetActive(false);
+                InsideCabinet.SetActive(true);
+            }
+
+            else if (scanObject.CompareTag("drawingdesk"))
+            {
+                if (!EraserCanvas.activeSelf)
+                {
+                    talkText.text = "지우개가 없어서 지울 수 없네ㅠㅠ";
+                    GameManager.instance.Action(scanObject);
+                }
+                else
+                {
+                    deskwithdraw.SetActive(true);
+                }
             }
 
             else GameManager.instance.Action(scanObject);
