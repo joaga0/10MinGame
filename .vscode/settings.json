@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "10MinGame.sln"
+    "dotnet.defaultSolution": "TeamProject_ME.sln"
 }
