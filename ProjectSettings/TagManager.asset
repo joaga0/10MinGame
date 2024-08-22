@@ -17,6 +17,7 @@ TagManager:
   - today
   - Bear
   - Puzzle
+  - NPC
   layers:
   - Default
   - TransparentFX

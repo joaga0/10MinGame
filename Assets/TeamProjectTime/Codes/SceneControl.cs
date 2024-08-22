@@ -35,6 +35,10 @@ public class SceneControl : MonoBehaviour
                 SceneManager.LoadScene("HospitalScene");
                 Debug.Log("Game Scene Changed : HospitalScene");
                 break;
+            case 9:
+                SceneManager.LoadScene("SampleScene");
+                Debug.Log("Game Scene Changed : SamepleScene");
+                break;
             default:
                 Debug.Log("다른 아이템입니다.");
                 break;

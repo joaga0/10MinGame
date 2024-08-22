@@ -2994,9 +2994,9 @@ GameObject:
   - component: {fileID: 599743494}
   - component: {fileID: 599743497}
   - component: {fileID: 599743498}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Child_1
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3162,9 +3162,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 599743491}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e0c8c3efa60ba74bb5dc9605d9a5d90, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b44e517272c499448ac07846d5dd40a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  talkText: {fileID: 1304866216}
 --- !u!1 &602160751
 GameObject:
   m_ObjectHideFlags: 0
