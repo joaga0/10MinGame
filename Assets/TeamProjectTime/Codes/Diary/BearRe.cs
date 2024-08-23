@@ -21,7 +21,7 @@ public class BearRe : MonoBehaviour
 
     public void Action()
     {
-        if(GameManager_Diary.instance.Needle || GameManager_Diary.instance.String) {
+        if(GameManager_Diary.instance.Needle && GameManager_Diary.instance.String) {
             canAct = true;
             ActCanvas.SetActive(true);
         }
