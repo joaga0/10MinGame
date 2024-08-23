@@ -14,12 +14,22 @@ public class GameManagerSample : MonoBehaviour
     Animator animator;
 
     public bool Displaying = false;
+    public static bool Gameend = false;
 
     public static int currentChapter = 0;
     void Awake()
     {
         instance = this;
         animator = ChangeScenePanel.GetComponent<Animator>();
+        if(Gameend){
+            StartCoroutine(GameEnd());
+        }
+    }
+
+    IEnumerator GameEnd()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneControl.instance.GameScenesControl(10);
     }
 
     //플레이어가 E 누르면 상호작용

@@ -3167,6 +3167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkText: {fileID: 1304866216}
   endingpanel: {fileID: 978855548}
+  Happy: {fileID: -12675146, guid: bd34cc0ae4e08584caa30fc2c997669e, type: 3}
 --- !u!1 &602160751
 GameObject:
   m_ObjectHideFlags: 0
