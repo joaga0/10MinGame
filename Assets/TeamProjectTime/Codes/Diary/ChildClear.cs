@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ChildClear : MonoBehaviour
 {
     public Text talkText;
+    public GameObject endingpanel;
 
     // Update is called once per frame
     public void DiaryClear()
@@ -19,6 +20,6 @@ public class ChildClear : MonoBehaviour
         yield return new WaitForSeconds(3f);
         talkText.text = "아빠 최고!";
         yield return new WaitForSeconds(3f);
-        SceneControl.instance.GameScenesControl(9);
+        endingpanel.SetActive(true);
     }
 }
