@@ -27,6 +27,10 @@ public class SceneEnding : MonoBehaviour
                 break;
             case 3:
                 content = "당신이 힘없는 소리할 때,\n더 마음이 아파서 듣기 싫다고만 했었지.\n그때라도 당신의 미소를 봤어야 했는데...\n많이 보고싶어.";
+                GameManagerSample.Gameend = true;
+                break;
+            case 5:
+                content = " 제작 \n 미 겜 고 \n\n 정지윤 \n 안가영 \n 이정빈 \n 김하빈 \n";
                 break;
         }
         StartCoroutine(FadeCoroutine());

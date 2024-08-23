@@ -40,6 +40,10 @@ public class SceneControl : MonoBehaviour
                 SceneManager.LoadScene("SampleScene");
                 Debug.Log("Game Scene Changed : SamepleScene");
                 break;
+            case 10:
+                SceneManager.LoadScene("EndingScene");
+                Debug.Log("Game Scene Changed : EndingScene");
+                break;
             default:
                 Debug.Log("다른 아이템입니다.");
                 break;
