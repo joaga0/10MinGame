@@ -24,6 +24,8 @@ TagManager:
   - drawingdesk
   - NPC
   - myfreind
+  - newdesk
+  - myfriend2
   layers:
   - Default
   - TransparentFX

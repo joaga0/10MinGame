@@ -59,6 +59,14 @@ public class StudentPlayer : MonoBehaviour
             {
                 talkText.text = "헉 이게 다 뭐야.. 내 친구 정말 힘들었겠다..";
                 GameManager.instance.Action(scanObject);
+                hasTalked3 = true;
+                // 한번 실행된 후 다시 실행되지 않도록 설정
+            }
+
+            if (scanObject.CompareTag("myfriend2"))
+            {
+                talkText.text = "이제 내가 도와줄게 혼자 힘들어 하지마!";
+                GameManager.instance.Action(scanObject);
                 // 한번 실행된 후 다시 실행되지 않도록 설정
             }
         }
