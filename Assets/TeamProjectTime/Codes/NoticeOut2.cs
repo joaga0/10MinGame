@@ -9,6 +9,7 @@ public class NoticeOut2 : MonoBehaviour
     public GameObject oldobject;
     public GameObject newobject;
     public GameObject myfriend;
+    public GameObject ending;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +28,7 @@ public class NoticeOut2 : MonoBehaviour
         newobject.SetActive(true);
         panel.SetActive(false);
         myfriend.SetActive(true);
+        ending.SetActive(true);
     }
 
 }

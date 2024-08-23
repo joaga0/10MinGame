@@ -108,6 +108,11 @@ public class StudentPlayer : MonoBehaviour
                 }
             }
 
+            else if(scanObject.CompareTag("classend"))
+            {
+                SceneControl.instance.GameScenesControl(9);
+            }
+
             else GameManager.instance.Action(scanObject);
         }
         if(!deskwithdraw.activeSelf)
