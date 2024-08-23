@@ -7,7 +7,16 @@ public class ChildClear : MonoBehaviour
 {
     public Text talkText;
     public GameObject endingpanel;
-
+    public Sprite Happy;
+    SpriteRenderer spriter;
+    private void Awake() {
+        spriter = GetComponent<SpriteRenderer>();
+    }
+    private void Update() {
+        if(GameManager_Diary.instance.Bear_Game && GameManager_Diary.instance.Puzzle_Game){
+            spriter.sprite = Happy;
+        }
+    }
     // Update is called once per frame
     public void DiaryClear()
     {
