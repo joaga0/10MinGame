@@ -36,6 +36,10 @@ public class SceneControl : MonoBehaviour
                 Debug.Log("Game Scene Changed : HospitalScene");
                 GameManagerSample.currentChapter++;
                 break;
+            case 5:
+                SceneManager.LoadScene("IntroScene");
+                Debug.Log("Game Scene Changed : IntroScene");
+                break;
             case 9:
                 SceneManager.LoadScene("SampleScene");
                 Debug.Log("Game Scene Changed : SamepleScene");

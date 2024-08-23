@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndingScene.unity
     guid: 93b4e1ff03dc21f45987ffd3f527d127
+  - enabled: 1
+    path: Assets/Scenes/GuitarScene.unity
+    guid: b8265d6db3410439b960dd04a4a0b77c
   m_configObjects: {}
