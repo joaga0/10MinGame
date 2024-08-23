@@ -18,11 +18,12 @@ public class StudentPlayer : MonoBehaviour
     public GameObject EraserCanvas;
     public GameObject deskwithdraw;
     public GameObject friend;
+    public GameObject endingpanel;
 
     public Texture2D eraserCursor;
 
     public float speed;
-    private bool hasTalked = false; // ¿À´Ã ³¯Â¥°¡ Ç¥½ÃµÇ¾ú´ÂÁö È®ÀÎÇÏ´Â ÇÃ·¡±×
+    private bool hasTalked = false; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥ï¿½ï¿½ Ç¥ï¿½ÃµÇ¾ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Ã·ï¿½ï¿½ï¿½
     private bool hasTalked2 = false;
     private bool hasTalked3 = false;
     Rigidbody2D rigid;
@@ -43,35 +44,36 @@ public class StudentPlayer : MonoBehaviour
         if (scanObject != null) {
             if (scanObject.CompareTag("today") && !hasTalked)
                 {
-                    talkText.text = "¿À´ÃÀÌ ¸î¿ù ¸çÄ¥ÀÌÁö?";
+                    talkText.text = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¥ï¿½ï¿½ï¿½ï¿½?";
                     GameManager.instance.Action(scanObject);
-                    hasTalked = true; // ÇÑ¹ø ½ÇÇàµÈ ÈÄ ´Ù½Ã ½ÇÇàµÇÁö ¾Êµµ·Ï ¼³Á¤
+                    hasTalked = true; // ï¿½Ñ¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Êµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
                 }
 
             if (scanObject.CompareTag("insidecabinet") && !hasTalked2)
             {
-                talkText.text = "¾ÆÂü, »ç¹°ÇÔ ³»ºÎ¸¦ ¾ÈºÃ³×!";
+                talkText.text = "ï¿½ï¿½ï¿½ï¿½, ï¿½ç¹°ï¿½ï¿½ ï¿½ï¿½ï¿½Î¸ï¿½ ï¿½ÈºÃ³ï¿½!";
                 GameManager.instance.Action(scanObject);
-                hasTalked2 = true; // ÇÑ¹ø ½ÇÇàµÈ ÈÄ ´Ù½Ã ½ÇÇàµÇÁö ¾Êµµ·Ï ¼³Á¤
+                hasTalked2 = true; // ï¿½Ñ¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Êµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             }
 
             if (scanObject.CompareTag("myfreind") && hasTalked3)
             {
-                talkText.text = "Çä ÀÌ°Ô ´Ù ¹¹¾ß.. ³» Ä£±¸ Á¤¸» Èûµé¾ú°Ú´Ù..";
+                talkText.text = "ï¿½ï¿½ ï¿½Ì°ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.. ï¿½ï¿½ Ä£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½..";
                 GameManager.instance.Action(scanObject);
                 hasTalked3 = true;
-                // ÇÑ¹ø ½ÇÇàµÈ ÈÄ ´Ù½Ã ½ÇÇàµÇÁö ¾Êµµ·Ï ¼³Á¤
+                // ï¿½Ñ¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Êµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             }
 
             if (scanObject.CompareTag("myfriend2"))
             {
-                talkText.text = "ÀÌÁ¦ ³»°¡ µµ¿ÍÁÙ°Ô È¥ÀÚ Èûµé¾î ÇÏÁö¸¶!";
+                talkText.text = "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ù°ï¿½ È¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½!"; //ë§¨ë§ˆì§€ë§‰ ëŒ€ì‚¬
                 GameManager.instance.Action(scanObject);
-                // ÇÑ¹ø ½ÇÇàµÈ ÈÄ ´Ù½Ã ½ÇÇàµÇÁö ¾Êµµ·Ï ¼³Á¤
+                // ï¿½Ñ¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Êµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+                StartCoroutine(ChangeScene());
             }
         }
 
-        //´ëÈ­Ã¢
+        //ï¿½ï¿½È­Ã¢
         if (Input.GetKeyDown(KeyCode.E) && scanObject != null)
         {
             if(scanObject.CompareTag("Notice"))
@@ -98,7 +100,7 @@ public class StudentPlayer : MonoBehaviour
             {
                 if (!EraserCanvas.activeSelf)
                 {
-                    talkText.text = "Áö¿ì°³°¡ ¾ø¾î¼­ Áö¿ìÁö ¸øÇÏ³× ¤Ð¤Ð";
+                    talkText.text = "ï¿½ï¿½ï¿½ì°³ï¿½ï¿½ ï¿½ï¿½ï¿½î¼­ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï³ï¿½ ï¿½Ð¤ï¿½";
                     GameManager.instance.Action(scanObject);
                 }
                 else
@@ -106,11 +108,6 @@ public class StudentPlayer : MonoBehaviour
                     deskwithdraw.SetActive(true);
                     Cursor.SetCursor(eraserCursor, Vector2.zero, CursorMode.Auto);
                 }
-            }
-
-            else if(scanObject.CompareTag("classend"))
-            {
-                SceneControl.instance.GameScenesControl(9);
             }
 
             else GameManager.instance.Action(scanObject);
@@ -143,25 +140,31 @@ public class StudentPlayer : MonoBehaviour
         anim.SetFloat("Speed", inputVec.magnitude);
         if (inputVec.y > 0)
         {
-            anim.Play("Player_BehindMove");  // À§·Î ÀÌµ¿(µÚÂÊÀ¸·Î)
-            dirVec = Vector3.up; //À§ÂÊ
+            anim.Play("Player_BehindMove");  // ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
+            dirVec = Vector3.up; //ï¿½ï¿½ï¿½ï¿½
         }
         else if (inputVec.y < 0)
         {
-            anim.Play("Player_FrontMove"); // ¾Æ·¡·Î ÀÌµ¿(¾ÕÂÊÀ¸·Î)
-            dirVec = Vector3.down; //¾Æ·¡ÂÊ
+            anim.Play("Player_FrontMove"); // ï¿½Æ·ï¿½ï¿½ï¿½ ï¿½Ìµï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
+            dirVec = Vector3.down; //ï¿½Æ·ï¿½ï¿½ï¿½
         }
         else if (inputVec.x > 0)
         {
             spriter.flipX = inputVec.x < 0;
-            anim.Play("Player_SideMove"); // ¿À¸¥ÂÊ ÀÌµ¿
-            dirVec = Vector3.right; //¿À¸¥ÂÊ
+            anim.Play("Player_SideMove"); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½
+            dirVec = Vector3.right; //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         }
         else if (inputVec.x < 0)
         {
             spriter.flipX = inputVec.x < 0;
-            anim.Play("Player_SideMove");  // ¿ÞÂÊ ÀÌµ¿
-            dirVec = Vector3.left; //¿ÞÂÊ
+            anim.Play("Player_SideMove");  // ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½
+            dirVec = Vector3.left; //ï¿½ï¿½ï¿½ï¿½
         }
+    }
+
+    IEnumerator ChangeScene()
+    {
+        yield return new WaitForSeconds(2f);
+        endingpanel.SetActive(true);
     }
 }
