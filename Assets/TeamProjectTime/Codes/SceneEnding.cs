@@ -12,6 +12,7 @@ public class SceneEnding : MonoBehaviour
     public Image image;
     public GameObject endingtext;
     public int sceneId;
+    bool end=false;
     // Start is called before the first frame update
     void Awake()
     {
@@ -31,6 +32,7 @@ public class SceneEnding : MonoBehaviour
                 break;
             case 5:
                 content = " 제작 \n 미 겜 고 \n\n 정지윤 \n 안가영 \n 이정빈 \n 김하빈 \n";
+                end=true;
                 break;
         }
         StartCoroutine(FadeCoroutine());
@@ -49,7 +51,10 @@ public class SceneEnding : MonoBehaviour
             yield return new WaitForSeconds(0.08f);
         }
         yield return new WaitForSeconds(3f);
-        SceneControl.instance.GameScenesControl(9);
+        if(end)
+            SceneControl.instance.GameScenesControl(5);
+        else
+            SceneControl.instance.GameScenesControl(9);
     }
     IEnumerator FadeCoroutine(){
         float fadeCount = 0f;

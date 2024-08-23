@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
 
 public class Connect : MonoBehaviour
 {
     public RectTransform canvasRectTransform; // 캔버스의 RectTransform
     public Image lineImage; // 선을 그릴 UI 이미지 (이미지의 RectTransform을 사용하여 선을 그린다)
+    public GameObject endingpanel;
     private RectTransform lineRectTransform; // 라인 이미지의 RectTransform
     private Vector2 startPoint; // 시작점
     private bool isDrawing = false; // 선을 그리고 있는지 여부
@@ -51,11 +54,14 @@ public class Connect : MonoBehaviour
     public void EndDrawing()
     {
         isDrawing = false; // 선 그리기 종료
+        ClosePanel();
     }
 
     public void ClosePanel()
     {
-        if (button1 && button2)
+        endingpanel.SetActive(true);
+        if (button1 && button2){
             cablePanel.SetActive(false);
+        }
     }
 }
