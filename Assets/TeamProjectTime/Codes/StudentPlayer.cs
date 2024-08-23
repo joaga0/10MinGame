@@ -40,26 +40,27 @@ public class StudentPlayer : MonoBehaviour
         inputVec.x = Input.GetAxisRaw("Horizontal");
         inputVec.y = Input.GetAxisRaw("Vertical");
 
+        if (scanObject != null) {
+            if (scanObject.CompareTag("today") && !hasTalked)
+                {
+                    talkText.text = "오늘이 몇월 며칠이지?";
+                    GameManager.instance.Action(scanObject);
+                    hasTalked = true; // 한번 실행된 후 다시 실행되지 않도록 설정
+                }
 
-        if (scanObject.CompareTag("today") && !hasTalked)
-        {
-            talkText.text = "오늘이 몇월 며칠이지?";
-            GameManager.instance.Action(scanObject);
-            hasTalked = true; // 한번 실행된 후 다시 실행되지 않도록 설정
-        }
+            if (scanObject.CompareTag("insidecabinet") && !hasTalked2)
+            {
+                talkText.text = "아참, 사물함 내부를 안봤네!";
+                GameManager.instance.Action(scanObject);
+                hasTalked2 = true; // 한번 실행된 후 다시 실행되지 않도록 설정
+            }
 
-        if (scanObject.CompareTag("insidecabinet") && !hasTalked2)
-        {
-            talkText.text = "아참, 사물함 내부를 안봤네!";
-            GameManager.instance.Action(scanObject);
-            hasTalked2 = true; // 한번 실행된 후 다시 실행되지 않도록 설정
-        }
-
-        if (scanObject.CompareTag("myfreind") && hasTalked3)
-        {
-            talkText.text = "헉 이게 다 뭐야.. 내 친구 정말 힘들었겠다..";
-            GameManager.instance.Action(scanObject);
-           // 한번 실행된 후 다시 실행되지 않도록 설정
+            if (scanObject.CompareTag("myfreind") && hasTalked3)
+            {
+                talkText.text = "헉 이게 다 뭐야.. 내 친구 정말 힘들었겠다..";
+                GameManager.instance.Action(scanObject);
+                // 한번 실행된 후 다시 실행되지 않도록 설정
+            }
         }
 
         //대화창
