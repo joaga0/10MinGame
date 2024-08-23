@@ -5,6 +5,7 @@ using UnityEngine;
 public class NoticeOut : MonoBehaviour
 {
     public GameObject panel;
+
     // Start is called before the first frame update
     void Start()
     {

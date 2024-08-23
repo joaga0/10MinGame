@@ -17,7 +17,13 @@ TagManager:
   - today
   - Bear
   - Puzzle
+  - Locker
+  - insidecabinet
+  - Unlockedcabinet
+  - Eraser
+  - drawingdesk
   - NPC
+  - myfreind
   layers:
   - Default
   - TransparentFX

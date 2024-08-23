@@ -12,10 +12,19 @@ public class StudentPlayer : MonoBehaviour
     SpriteRenderer spriter;
     public GameObject OpenCabinet;
     public Text talkText;
+    public GameObject Locker;
+    public GameObject InsideCabinet;
+    public GameObject Unlockers;
+    public GameObject EraserCanvas;
+    public GameObject deskwithdraw;
+    public GameObject friend;
+
+    public Texture2D eraserCursor;
 
     public float speed;
     private bool hasTalked = false; // 오늘 날짜가 표시되었는지 확인하는 플래그
-
+    private bool hasTalked2 = false;
+    private bool hasTalked3 = false;
     Rigidbody2D rigid;
     Animator anim;
 
@@ -39,6 +48,20 @@ public class StudentPlayer : MonoBehaviour
             hasTalked = true; // 한번 실행된 후 다시 실행되지 않도록 설정
         }
 
+        if (scanObject.CompareTag("insidecabinet") && !hasTalked2)
+        {
+            talkText.text = "아참, 사물함 내부를 안봤네!";
+            GameManager.instance.Action(scanObject);
+            hasTalked2 = true; // 한번 실행된 후 다시 실행되지 않도록 설정
+        }
+
+        if (scanObject.CompareTag("myfreind") && hasTalked3)
+        {
+            talkText.text = "헉 이게 다 뭐야.. 내 친구 정말 힘들었겠다..";
+            GameManager.instance.Action(scanObject);
+           // 한번 실행된 후 다시 실행되지 않도록 설정
+        }
+
         //대화창
         if (Input.GetKeyDown(KeyCode.E) && scanObject != null)
         {
@@ -49,11 +72,37 @@ public class StudentPlayer : MonoBehaviour
 
             else if(scanObject.CompareTag("Cabinet"))
             {
-                OpenCabinet.SetActive(true);
+                Locker.SetActive(true);
+            }
+
+            else if(scanObject.CompareTag("Unlockedcabinet"))
+            {
+                hasTalked = true;
+                hasTalked2 = true;
+                Unlockers.SetActive(false);
+                InsideCabinet.SetActive(true);
+                friend.SetActive(true);
+                hasTalked3 = true;
+            }
+
+            else if (scanObject.CompareTag("drawingdesk"))
+            {
+                if (!EraserCanvas.activeSelf)
+                {
+                    talkText.text = "지우개가 없어서 지우지 못하네 ㅠㅠ";
+                    GameManager.instance.Action(scanObject);
+                }
+                else
+                {
+                    deskwithdraw.SetActive(true);
+                    Cursor.SetCursor(eraserCursor, Vector2.zero, CursorMode.Auto);
+                }
             }
 
             else GameManager.instance.Action(scanObject);
         }
+        if(!deskwithdraw.activeSelf)
+            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 
     void FixedUpdate()
