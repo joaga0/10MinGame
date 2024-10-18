@@ -5,9 +5,28 @@ TagManager:
   serializedVersion: 2
   tags:
   - GetItem
+  - Sink
+  - Shelf
+  - Plant
+  - Grandma
   - Guitar
   - Amp
   - Cable
+  - Notice
+  - Cabinet
+  - today
+  - Bear
+  - Puzzle
+  - Locker
+  - insidecabinet
+  - Unlockedcabinet
+  - Eraser
+  - drawingdesk
+  - NPC
+  - myfreind
+  - newdesk
+  - myfriend2
+  - classend
   layers:
   - Default
   - TransparentFX
